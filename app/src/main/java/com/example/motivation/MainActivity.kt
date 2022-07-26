@@ -1,8 +1,8 @@
 package com.example.motivation
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.example.motivation.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -17,12 +17,19 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         //Esconde barra de navegação
         supportActionBar?.hide()
 
+        handleUserName()
+
         binding.buttonNewPhrase.setOnClickListener(this)
     }
 
     override fun onClick(view: View) {
-        if(view.id == R.id.button_new_phrase){
+        if (view.id == R.id.button_new_phrase) {
             var a = 1
         }
+    }
+
+    private fun handleUserName() {
+        val name = SecurityPreferences(this).getString("USER_NAME")
+        binding.textUserName.text = "Olá,${name}!"
     }
 }
