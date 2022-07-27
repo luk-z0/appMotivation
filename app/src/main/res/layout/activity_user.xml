@@ -5,8 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/purple"
-    tools:context=".UserActivity">
-Lu    <TextView
+    tools:context=".ui.UserActivity">
+
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/cabin"
@@ -27,8 +28,8 @@ Lu    <TextView
         android:layout_marginBottom="16dp"
         android:fontFamily="@font/cabin"
         android:hint="@string/edit_text_name"
-        android:textColor="@color/white"
         android:textAlignment="center"
+        android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:textSize="28sp" />
 
